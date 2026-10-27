@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Contato do Cliente | IFF</title>
+    <meta name="description" content="O Curso de Sistemas de Informação do IFF prepara profissionais com sólida fundamentação em engenharia de computação e arquitetura de desenvolvimento web.">
+    
+    <meta property="og:title" content="Bacharelado em Sistemas de Informação | IFF">
+    <meta property="og:description" content="O Curso de Sistemas de Informação do IFF prepara profissionais com sólida fundamentação inabalável em desenvolvimento web.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://iff.edu.br">
+</head>
+<body>
+
+    <header>
+        <h1>Área de Contato do Cliente</h1>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Envie sua mensagem para a nossa equipe de suporte backend</h2>
+            
+            <form action="/enviar" method="POST">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required minlength="3" placeholder="Ex: João da Silva">
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="joao@estudante.iff.edu.br">
+                <br><br>
+
+                <label for="celular">Telefone Celular:</label>
+                <input type="tel" id="celular" name="celular" required pattern="[0-9]{11}" placeholder="Ex: 22999998888">
+                <br><br>
+
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="msg" required placeholder="Digite sua mensagem..."></textarea>
+                <br><br>
+                
+                <button type="submit">Disparar Dados</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>Suporte Tech <time datetime="2026">2026</time></p>
+    </footer>
+
+</body>
+</html>
