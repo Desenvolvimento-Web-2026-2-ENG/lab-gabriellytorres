@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Técnico - Abertura de Chamado</title>
+</head>
+<body>
+
+    <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Abrir Chamado Técnico</legend>
+
+            <div>
+                <label for="campo-nome">Nome Completo:</label>
+                <input type="text" id="campo-nome" name="nome" required>
+            </div>
+
+            <div>
+                <label for="campo-email">E-mail de Contato:</label>
+                <input type="email" id="campo-email" name="email" required>
+            </div>
+
+            <div>
+                <label for="campo-prioridade">Prioridade:</label>
+                <select id="campo-prioridade" name="prioridade" required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="campo-anexo">Arquivo de Log ou Print (PNG/PDF):</label>
+                <input 
+                    type="file" 
+                    id="campo-anexo" 
+                    name="anexo" 
+                    accept="image/png,application/pdf" 
+                    aria-describedby="ajuda-anexo" 
+                    required
+                >
+                <p id="ajuda-anexo">Selecione apenas imagens no formato PNG ou documentos PDF.</p>
+            </div>
+
+            <button type="submit">Enviar Chamado</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
