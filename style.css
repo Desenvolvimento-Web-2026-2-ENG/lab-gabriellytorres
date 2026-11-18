@@ -1,0 +1,119 @@
+
+:root {
+    --cor-primaria: #0056b3;
+    --cor-primaria-hover: #003d82;
+    --cor-fundo: #f8f9fa;
+    --cor-superficie: #ffffff;
+    --cor-texto: #333333;
+    --cor-borda: #dee2e6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+    
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "nav main";
+}
+
+header {
+    grid-area: header;
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 1.5rem 2rem;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--cor-superficie);
+    border-right: 1px solid var(--cor-borda);
+    padding: 1.5rem;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: var(--cor-fundo);
+}
+
+hr {
+    display: none;
+}
+
+nav h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom: 0.8rem;
+}
+
+nav ul ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav ol ul {
+    list-style-type: square;
+    margin-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+.item-ativo {
+    color: var(--cor-primaria);
+    background-color: #e9ecef;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main";
+    }
+
+    nav {
+        border-right: none;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+}
