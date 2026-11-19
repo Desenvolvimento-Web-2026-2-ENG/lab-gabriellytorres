@@ -1,10 +1,11 @@
-
 :root {
-    --cor-primaria: #0056b3;
-    --cor-primaria-hover: #003d82;
+    --cor-primaria: #6f42c1;
+    --cor-primaria-hover: #59359a;
+    --cor-destaque-fundo: #f3e8ff;
     --cor-fundo: #f8f9fa;
     --cor-superficie: #ffffff;
     --cor-texto: #333333;
+    --cor-texto-claro: #ffffff;
     --cor-borda: #dee2e6;
 }
 
@@ -19,7 +20,6 @@ body {
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
     line-height: 1.6;
-    
     display: grid;
     min-height: 100vh;
     grid-template-columns: 280px 1fr;
@@ -31,9 +31,13 @@ body {
 
 header {
     grid-area: header;
-    background-color: var(--cor-superficie);
-    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
     padding: 1.5rem 2rem;
+}
+
+header h1, header p {
+    color: var(--cor-texto-claro);
 }
 
 nav {
@@ -95,11 +99,12 @@ nav a:hover {
 }
 
 .item-ativo {
-    color: var(--cor-primaria);
-    background-color: #e9ecef;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    display: inline-block;
+    color: var(--cor-primaria-hover);
+    background-color: var(--cor-destaque-fundo);
+    padding: 0.5rem 1rem;
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 0 4px 4px 0;
+    display: block;
 }
 
 @media (max-width: 768px) {
